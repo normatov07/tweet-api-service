@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tweet_service
+    volumes:
+      - "./src/logs:/go/src/app/logs"
+      - "./src/storage:/go/src/app/storage"
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    ports:
+      - "8082:8082"
+    networks:
+      - tweet_network
+      - system_network
+
+  postgres:
+    image: postgres:16
+    container_name: tweet_service_db
+    environment:
+      POSTGRES_DB: "tweet_db"
+      POSTGRES_USER: "tweet_user"
+      POSTGRES_PASSWORD: "tweet_pass"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - .:/var/lib/postgresql/data
+    ports:
+      - "5437:5432"
+    networks:
+      - tweet_network
+      - system_network
+
+networks:
+  tweet_network:
+    driver: bridge
+  system_network:
+    external: true
+    

@@ -1,0 +1,9 @@
+2024/08/03 09:44:28 /var/www/learning/mini-tweet/app/api/rest/controller/post.go:38: server error
+2024/08/03 09:45:11 /var/www/learning/mini-tweet/app/api/rest/controller/post.go:38: server error
+2024/08/03 09:45:17 /var/www/learning/mini-tweet/app/api/rest/controller/post.go:38: pq: syntax error at or near "like"
+2024/08/03 09:48:10 /var/www/learning/mini-tweet/app/api/rest/controller/post.go:38: sql: no rows in result set
+2024/08/03 09:51:06 /var/www/learning/mini-tweet/app/api/rest/controller/post.go:38: open storage/post: is a directory
+2024/08/03 12:00:34 /go/src/app/db/postgres/postgres.go:36: error_ping_db: dial tcp 192.168.96.2:5432: connect: connection refused
+2024/08/03 12:00:37 /go/src/app/db/postgres/postgres.go:36: error_ping_db: dial tcp 192.168.96.2:5432: connect: connection refused
+2024/08/03 12:00:39 /go/src/app/db/postgres/postgres.go:36: error_ping_db: dial tcp 192.168.96.2:5432: connect: connection refused
+2024/08/03 12:00:41 /go/src/app/db/postgres/postgres.go:36: error_ping_db: dial tcp 192.168.96.2:5432: connect: connection refused
